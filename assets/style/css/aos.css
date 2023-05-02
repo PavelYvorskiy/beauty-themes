@@ -1,0 +1,25 @@
+[data-aos=cone-bg] {
+  transform: translateY(100%);
+}
+[data-aos=cone-bg].aos-animate {
+  transform: translateY(0);
+}
+
+[data-aos=cone-title] {
+  transform: translateX(-94%);
+}
+[data-aos=cone-title].aos-animate {
+  transform: translateX(0);
+}
+@media (max-width: 460px) {
+  [data-aos=cone-title] {
+    transform: scale(0);
+    opacity: 0;
+  }
+  [data-aos=cone-title].aos-animate {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=aos.css.map */

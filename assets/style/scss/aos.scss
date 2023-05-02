@@ -1,0 +1,24 @@
+[data-aos="cone-bg"] {
+    // opacity: 0;
+    transform: translateY(100%);
+    &.aos-animate {
+    //   opacity: 1;
+    transform: translateY(0);
+    }
+}  
+
+[data-aos="cone-title"] {
+    transform: translateX(-94%);
+    &.aos-animate {
+      transform: translateX(0);
+    }
+    @media(max-width:460px) {
+        transform: scale(0);
+        opacity: 0;
+    
+        &.aos-animate {
+         transform: scale(1);
+         opacity: 1;
+        }
+      }
+}  

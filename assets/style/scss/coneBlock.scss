@@ -1,0 +1,127 @@
+.cone-block {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: black;
+}
+.cone-box-title {
+    display: grid;
+    align-content: center;
+    position: relative;
+    gap: 3vw;
+    backdrop-filter: blur(3px);
+    &::after{
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(90deg, var(--light-gold), var(--dark-gold));
+    }
+}
+.cone-title {
+    position: relative;
+    left: -10%;
+    font-size: 4vw;
+    text-transform:uppercase ;
+    letter-spacing: 0.2em;
+    gap: 1vw;
+    display: grid;
+    background-color: var(--dark-gold);
+    background-image: linear-gradient(90deg, var(--light-gold), var(--dark-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     text-align: center;
+}
+.cone-subtitle{
+    position: relative;
+    left: -10%;
+    color: var(--light-gold);
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    font-size: 1vw;
+    text-align: center;
+    
+}
+.cone-text {
+    max-width: 400px;
+    line-height: 1.5;
+    color: var(--light-gray);
+    padding: 5px 10px 5px 20px;
+    font-weight: 100;
+    text-transform: lowercase;
+
+}
+.cone-box-bg {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    display: grid;
+    z-index: 1;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.bg-img {
+    position: relative;
+    overflow: hidden;
+    background: url(https://e0.pxfuel.com/wallpapers/172/385/desktop-wallpaper-african-women-gold-golden-woman.jpg) center / cover;
+}
+
+.cone-box-description {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    gap: 1vw;
+    position: relative;
+    margin-bottom: 10px;
+    text-align: center;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 10%;
+        right: -25%;
+        height: 1px;
+        width: 125%;
+        background: linear-gradient(90deg, var(--dark-gold), var(--light-gold));
+    }
+}
+
+@media(max-width: 460px){
+    .cone-block{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:1fr 3fr 1fr ;
+        gap: 0px;
+    }
+    .bg-img {
+        position: relative;
+        overflow: hidden;
+        background: url(https://e0.pxfuel.com/wallpapers/172/385/desktop-wallpaper-african-women-gold-golden-woman.jpg)top 20% center / cover;
+    }
+    .cone-box-description{
+        order: 3;
+        &::after{
+            content: '';
+            right: 5%;
+        }
+    }
+    .cone-box-bg{
+        order: 2;
+    }
+    .cone-box-title{
+        text-align: center;
+    }
+    .cone-subtitle{
+        left: 0;
+        font-size: 3vw;
+    }
+    .cone-title{
+        left: 0;
+        font-size: 6vw;
+    }
+}
